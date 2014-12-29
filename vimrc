@@ -16,6 +16,8 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-endwise'
 " Colors
 Plugin 'nanotech/jellybeans.vim'
 
@@ -104,3 +106,6 @@ map <leader>q <esc>:q<cr>
 map <leader>Q <esc>:q!<cr>
 "Quick save to repo as WIP
 map <Leader>gwip :!git add . && git commit -m 'WIP' && git push origin<cr>
+"mapping for GIT
+map gt :Gstatus<cr>
+"nuevo cambio
