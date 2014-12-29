@@ -96,4 +96,4 @@ nmap <leader>x :xa<cr>
 map <leader>q <esc>:q<cr>
 map <leader>Q <esc>:qa<cr>
 "Quick save to repo as WIP
-map <Leader>gwip :!git add . && git commit -m 'WIP' && git push<cr>
+map <Leader>gwip :!git add . && git commit -m 'WIP' && git push origin<cr>
