@@ -1,5 +1,5 @@
 set nocompatible "required by Vundle
-filetype off     "required b Vundle
+filetype off     "required by Vundle
 execute pathogen#infect()
 
 " set the runtime path to include Vundle and initialize
@@ -38,6 +38,7 @@ set showcmd " display incomplete commands
 set incsearch "do incremental search
 set autowrite " Automatically :write before running commands
 set hlsearch
+setlocal spell spelllang=en_us
 syntax on
 
 " Treat <li> and <p> tags like the block tags they are
