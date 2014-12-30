@@ -18,6 +18,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
+Plugin 'Lokaltog/vim-easymotion'
 " Colors
 Plugin 'nanotech/jellybeans.vim'
 
@@ -108,4 +109,10 @@ map <leader>Q <esc>:q!<cr>
 map <Leader>gwip :!git add . && git commit -m 'WIP' && git push origin<cr>
 "mapping for GIT
 map gt :Gstatus<cr>
-"nuevo cambio
+"Easymotion mapping
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+nmap <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>t <Plug>(easymotion-t2)
