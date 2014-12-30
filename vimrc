@@ -19,6 +19,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'eiginn/netrw'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
+
 " Colors
 Plugin 'nanotech/jellybeans.vim'
 
@@ -30,7 +34,7 @@ colorscheme jellybeans
 
 " set leader
 let mapleader = " "
-nmap nn :NERDTreeToggle<CR>
+nmap <leader>m :NERDTreeToggle<CR>
 set noswapfile
 set encoding=utf-8
 set ruler "show the cursor position all the time
@@ -117,3 +121,18 @@ map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>t <Plug>(easymotion-t2)
+" Don't scroll off the edge of the page
+set scrolloff=5
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_section_y= '%{strftime("%c")}'
+let NERDTreeIgnore = ['\.swp$']
+
+" vim tab navigation
+
+nnoremap th :tabfirst<CR>
+nnoremap tj :tabprev<CR>
+nnoremap tk :tabnext<CR>
+nnoremap tl :tablast<CR>
+nnoremap tc :tabclose<CR>
+nnoremap tn :tabnew<CR>
