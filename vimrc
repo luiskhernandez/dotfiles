@@ -58,6 +58,12 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
 
 "number configuration
 set number
@@ -136,3 +142,11 @@ nnoremap tk :tabnext<CR>
 nnoremap tl :tablast<CR>
 nnoremap tc :tabclose<CR>
 nnoremap tn :tabnew<CR>
+
+"I really hate that things don't auto-center
+nmap G Gzz
+nmap n nzz
+nmap N Nzz
+nmap } }zz
+nmap { {zz
+" https://github.com/shawncplus/dotfiles/blob/master/.vim/startup/mappings.vim
