@@ -22,7 +22,9 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'eiginn/netrw'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
-
+Plugin 'rking/ag.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'altercation/vim-colors-solarized'
 " Colors
 Plugin 'nanotech/jellybeans.vim'
 
@@ -31,9 +33,14 @@ filetype plugin indent on    " required
 
 " Use the colorscheme from above
 colorscheme jellybeans
+set background=dark
+" let g:solarized_termcolors = 256
+" colorscheme solarized
 
 " set leader
 let mapleader = " "
+"for closer key
+nmap ñ :
 nmap <leader>m :NERDTreeToggle<CR>
 set noswapfile
 set encoding=utf-8
@@ -149,4 +156,9 @@ nmap n nzz
 nmap N Nzz
 nmap } }zz
 nmap { {zz
-" https://github.com/shawncplus/dotfiles/blob/master/.vim/startup/mappings.vim
+
+"quick pairs
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
