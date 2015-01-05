@@ -5,6 +5,7 @@ execute pathogen#infect()
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
+
 " let Vundle manage Vundle, required
 call vundle#begin() "required
 Plugin 'gmarik/Vundle.vim'
@@ -18,6 +19,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-dispatch'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'eiginn/netrw'
 Plugin 'kien/ctrlp.vim'
@@ -25,6 +27,7 @@ Plugin 'bling/vim-airline'
 Plugin 'rking/ag.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'mattn/emmet-vim'
 " Colors
 Plugin 'nanotech/jellybeans.vim'
 
@@ -132,7 +135,7 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
-nmap <Leader>s <Plug>(easymotion-s2)
+nmap <Leader>f <Plug>(easymotion-s2)
 nmap <Leader>t <Plug>(easymotion-t2)
 " Don't scroll off the edge of the page
 set scrolloff=5
@@ -162,3 +165,11 @@ inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
+" RSpec.vim mappings
+nmap ,t :call RunCurrentSpecFile()<CR>
+nmap ,s :call RunNearestSpec()<CR>
+nmap ,l :call RunLastSpec()<CR>
+nmap ,a :call RunAllSpecs()<CR>
+" let g:rspec_runner = "os_x_iterm"
+let g:rspec_command = "Dispatch spring rspec {spec}"
+let g:user_emmet_leader_key='<Tab>'
