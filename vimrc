@@ -28,6 +28,9 @@ Plugin 'rking/ag.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mattn/emmet-vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'jgdavey/tslime.vim'
+
 " Colors
 Plugin 'nanotech/jellybeans.vim'
 
@@ -35,7 +38,7 @@ call vundle#end()   " required
 filetype plugin indent on    " required
 
 " Use the colorscheme from above
-colorscheme jellybeans
+colorscheme monokai
 set background=dark
 " let g:solarized_termcolors = 256
 " colorscheme solarized
@@ -44,7 +47,7 @@ set background=dark
 let mapleader = " "
 "for closer key
 nmap ñ :
-nmap <leader>m :NERDTreeToggle<CR>
+nnoremap <leader>m :NERDTreeToggle<CR>
 set noswapfile
 set encoding=utf-8
 set ruler "show the cursor position all the time
@@ -52,7 +55,7 @@ set showcmd " display incomplete commands
 set incsearch "do incremental search
 set autowrite " Automatically :write before running commands
 set hlsearch
-setlocal spell spelllang=en_us
+" setlocal spell spelllang=en_us
 syntax on
 
 " Treat <li> and <p> tags like the block tags they are
@@ -99,12 +102,11 @@ map , viw
 no <down> ddp
 no <up> ddkP
 
-
 " edit my vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " surround current word with "
-noremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
+noremap <leader>2 viw<esc>a"<esc>hbi"<esc>lel
 
 " indent all file
 map <leader>i mmgg=G'm<CR>
@@ -153,6 +155,7 @@ nnoremap tl :tablast<CR>
 nnoremap tc :tabclose<CR>
 nnoremap tn :tabnew<CR>
 
+
 "I really hate that things don't auto-center
 nmap G Gzz
 nmap n nzz
@@ -171,5 +174,16 @@ nmap ,s :call RunNearestSpec()<CR>
 nmap ,l :call RunLastSpec()<CR>
 nmap ,a :call RunAllSpecs()<CR>
 " let g:rspec_runner = "os_x_iterm"
-let g:rspec_command = "Dispatch spring rspec {spec}"
+let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
 let g:user_emmet_leader_key='<Tab>'
+" map for commetary usin cm is more friendly"
+map cm gc
+" use F to serach"
+noremap F /
+
+"Sane Ignore For ctrlp"
+let g:ctrlp_custom_ignore = {
+\ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$\|node_modules$',
+\ 'file': '\.so$\|\.dat$|\.DS_Store$'
+\ }
+
