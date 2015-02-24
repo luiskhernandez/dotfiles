@@ -10,7 +10,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin() "required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'kchmck/vim-coffee-script'
+Plugin 'mintplant/vim-literate-coffeescript'
 Plugin 'ervandew/supertab'
 Plugin 'skwp/greplace.vim'
 Plugin 'tpope/vim-rails'
@@ -33,6 +33,7 @@ Plugin 'jgdavey/tslime.vim'
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
+Plugin 'mustache/vim-mustache-handlebars'
 " Colors
 Plugin 'nanotech/jellybeans.vim'
 
@@ -187,4 +188,6 @@ let g:ctrlp_custom_ignore = {
 \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$\|node_modules$',
 \ 'file': '\.so$\|\.dat$|\.DS_Store$'
 \ }
+
+let g:user_emmet_leader_key='<Tab>'
 
