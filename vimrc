@@ -30,6 +30,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
+"reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
 " Colors
@@ -174,7 +175,7 @@ nmap ,s :call RunNearestSpec()<CR>
 nmap ,l :call RunLastSpec()<CR>
 nmap ,a :call RunAllSpecs()<CR>
 " let g:rspec_runner = "os_x_iterm"
-let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
+let g:rspec_command = "call Send_to_Tmux(' spring rspec {spec}\n')"
 let g:user_emmet_leader_key='<Tab>'
 " map for commetary usin cm is more friendly"
 map cm gc
