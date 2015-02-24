@@ -30,6 +30,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " Colors
 Plugin 'nanotech/jellybeans.vim'
@@ -162,7 +163,6 @@ nmap n nzz
 nmap N Nzz
 nmap } }zz
 nmap { {zz
-
 "quick pairs
 inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
