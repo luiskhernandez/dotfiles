@@ -131,6 +131,7 @@ nmap S :x<cr>
 "shortcut for close (:q) buffer 
 map <leader>q <esc>:q<cr>
 map <leader>Q <esc>:q!<cr>
+nmap <leader>c :nohl<cr>
 "Quick save to repo as WIP
 map <Leader>gwip :!git add . && git commit -m 'WIP' && git push origin<cr>
 "mapping for GIT
@@ -141,7 +142,7 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 nmap <Leader>f <Plug>(easymotion-s2)
-nmap <Leader>t <Plug>(easymotion-t2)
+nnoremap <Leader>t <Plug>(easymotion-t2)
 " Don't scroll off the edge of the page
 set scrolloff=5
 set laststatus=2
@@ -170,6 +171,9 @@ inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
+inoremap pry binding.pry
+
+
 " RSpec.vim mappings
 nmap ,t :call RunCurrentSpecFile()<CR>
 nmap ,s :call RunNearestSpec()<CR>
@@ -190,4 +194,11 @@ let g:ctrlp_custom_ignore = {
 \ }
 
 let g:user_emmet_leader_key='<Tab>'
+
+"Auto spell correctio"
+
+iabbrev lenght length
+iabbrev widht width
+iabbrev heigth height
+
 
