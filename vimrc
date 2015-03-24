@@ -180,8 +180,7 @@ nmap ,s :call RunNearestSpec()<CR>
 nmap ,l :call RunLastSpec()<CR>
 nmap ,a :call RunAllSpecs()<CR>
 " let g:rspec_runner = "os_x_iterm"
-let g:rspec_command = "call Send_to_Tmux(' spring rspec {spec}\n')"
-let g:user_emmet_leader_key='<Tab>'
+let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
 " map for commetary usin cm is more friendly"
 map cm gc
 " use F to serach"
@@ -193,7 +192,9 @@ let g:ctrlp_custom_ignore = {
 \ 'file': '\.so$\|\.dat$|\.DS_Store$'
 \ }
 
-let g:user_emmet_leader_key='<Tab>'
+
+"Remove all comments from file"
+map <leader>rc :g/^\#/d<CR>
 
 "Auto spell correctio"
 
