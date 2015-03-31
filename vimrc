@@ -31,6 +31,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
+Plugin 'Shougo/neocomplete'
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
