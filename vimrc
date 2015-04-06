@@ -31,8 +31,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'msanders/snipmate.vim'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
-
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
@@ -197,6 +197,8 @@ let g:ctrlp_custom_ignore = {
 \ 'file': '\.so$\|\.dat$|\.DS_Store$'
 \ }
 
+set foldmethod=syntax
+set foldlevelstart=20
 
 "Remove all comments from file"
 map <leader>rc :g/^\#/d<CR>
