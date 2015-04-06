@@ -1,6 +1,5 @@
 set nocompatible "required by Vundle
 filetype off     "required by Vundle
-execute pathogen#infect()
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -31,7 +30,9 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
-Plugin 'Shougo/neocomplete'
+Plugin 'msanders/snipmate.vim'
+Plugin 'scrooloose/nerdtree'
+
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
@@ -188,6 +189,8 @@ map cm gc
 " use F to serach"
 noremap F /
 
+"show cursor line Horizontal and Vertical"
+set cursorline cursorcolumn
 "Sane Ignore For ctrlp"
 let g:ctrlp_custom_ignore = {
 \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$\|node_modules$',
