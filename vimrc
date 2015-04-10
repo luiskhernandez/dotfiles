@@ -33,6 +33,7 @@ Plugin 'jgdavey/tslime.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
+Plugin 'kchmck/vim-coffee-script'
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
@@ -62,7 +63,7 @@ set incsearch "do incremental search
 set autowrite " Automatically :write before running commands
 set hlsearch
 " setlocal spell spelllang=en_us
-syntax on
+syntax enable
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
