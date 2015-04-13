@@ -210,4 +210,4 @@ iabbrev lenght length
 iabbrev widht width
 iabbrev heigth height
 
-
+set mouse=a
