@@ -10,7 +10,6 @@ call vundle#begin() "required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'mintplant/vim-literate-coffeescript'
-Plugin 'ervandew/supertab'
 Plugin 'skwp/greplace.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
@@ -34,6 +33,7 @@ Plugin 'msanders/snipmate.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-scripts/ZoomWin'
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
@@ -54,6 +54,7 @@ set background=dark
 let mapleader = " "
 "for closer key
 nmap ñ :
+vmap ñ :
 nnoremap <leader>m :NERDTreeToggle<CR>
 set noswapfile
 set encoding=utf-8
@@ -135,7 +136,7 @@ nmap S :x<cr>
 "shortcut for close (:q) buffer 
 map <leader>q <esc>:q<cr>
 map <leader>Q <esc>:q!<cr>
-nmap <leader>c :nohl<cr>
+nnoremap <leader>c :nohl<cr>
 "Quick save to repo as WIP
 map <Leader>gwip :!git add . && git commit -m 'WIP' && git push origin<cr>
 "mapping for GIT
@@ -163,6 +164,9 @@ nnoremap tl :tablast<CR>
 nnoremap tc :tabclose<CR>
 nnoremap tn :tabnew<CR>
 
+" vim buffer navigation"
+noremap <leader><right> :bnext<CR>
+noremap <leader><left>  :bprevious<CR>
 
 "I really hate that things don't auto-center
 nmap G Gzz
@@ -189,7 +193,7 @@ let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
 map cm gc
 " use F to serach"
 noremap F /
-
+map !d "_
 "show cursor line Horizontal and Vertical"
 set cursorline cursorcolumn
 "Sane Ignore For ctrlp"
@@ -211,3 +215,7 @@ iabbrev widht width
 iabbrev heigth height
 
 set mouse=a
+
+" Maping for easy autcomplition"
+inoremap <C-l> <C-x><C-l>
+inoremap <C-f> <C-x><C-f>
