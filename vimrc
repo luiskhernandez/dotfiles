@@ -20,12 +20,10 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-dispatch'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'eiginn/netrw'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'rking/ag.vim'
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
@@ -33,13 +31,14 @@ Plugin 'msanders/snipmate.vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'vim-scripts/ZoomWin'
+Plugin 'godlygeek/tabular'
+Plugin 'taylor/vim-zoomwin'
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
 Plugin 'mustache/vim-mustache-handlebars'
 " Colors
-Plugin 'nanotech/jellybeans.vim'
+" Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()   " required
 filetype plugin indent on    " required
@@ -114,7 +113,7 @@ no <up> ddkP
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " surround current word with "
-noremap <leader>2 viw<esc>a"<esc>hbi"<esc>lel
+noremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
 " indent all file
 map <leader>i mmgg=G'm<CR>
@@ -180,6 +179,7 @@ inoremap " ""<ESC>i
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap pry binding.pry
+inoremap log console.log
 
 
 " RSpec.vim mappings
@@ -187,13 +187,15 @@ nmap ,t :call RunCurrentSpecFile()<CR>
 nmap ,s :call RunNearestSpec()<CR>
 nmap ,l :call RunLastSpec()<CR>
 nmap ,a :call RunAllSpecs()<CR>
+
 " let g:rspec_runner = "os_x_iterm"
 let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
 " map for commetary usin cm is more friendly"
 map cm gc
 " use F to serach"
 noremap F /
-map !d "_
+map !d "_d
+map !c "_c
 "show cursor line Horizontal and Vertical"
 set cursorline cursorcolumn
 "Sane Ignore For ctrlp"
@@ -219,3 +221,6 @@ set mouse=a
 " Maping for easy autcomplition"
 inoremap <C-l> <C-x><C-l>
 inoremap <C-f> <C-x><C-f>
+
+"maping for ZoomWin"
+nnoremap <leader>z :ZoomWin<CR>
