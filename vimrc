@@ -37,6 +37,8 @@ Plugin 'taylor/vim-zoomwin'
 Bundle 'christoomey/vim-tmux-navigator'
 
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'kana/vim-textobj-user'
+Plugin 'rhysd/vim-textobj-ruby'
 " Colors
 " Plugin 'nanotech/jellybeans.vim'
 
@@ -189,7 +191,8 @@ nmap ,l :call RunLastSpec()<CR>
 nmap ,a :call RunAllSpecs()<CR>
 
 " let g:rspec_runner = "os_x_iterm"
-let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
+" let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
+let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
 " map for commetary usin cm is more friendly"
 map cm gc
 " use F to serach"
@@ -204,8 +207,8 @@ let g:ctrlp_custom_ignore = {
 \ 'file': '\.so$\|\.dat$|\.DS_Store$'
 \ }
 
-set foldmethod=syntax
-set foldlevelstart=20
+" set foldmethod=syntax
+" set foldlevelstart=20
 
 "Remove all comments from file"
 map <leader>rc :g/^\#/d<CR>
@@ -224,3 +227,7 @@ inoremap <C-f> <C-x><C-f>
 
 "maping for ZoomWin"
 nnoremap <leader>z :ZoomWin<CR>
+
+"config for rubocop , for now just for VHL projecyts at koombea"
+let g:vimrubocop_config = '/Users/koombea/projects/vhl/vhl-rubocop.yml'
+let g:ctrlp_max_files=0
