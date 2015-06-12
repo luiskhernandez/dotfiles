@@ -231,3 +231,5 @@ nnoremap <leader>z :ZoomWin<CR>
 "config for rubocop , for now just for VHL projecyts at koombea"
 let g:vimrubocop_config = '/Users/koombea/projects/vhl/vhl-rubocop.yml'
 let g:ctrlp_max_files=0
+" clipboard unnamed for yank between vim, tmux and osx"
+set clipboard=unnamed
