@@ -33,6 +33,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
 Plugin 'taylor/vim-zoomwin'
+Plugin 'tmhedberg/matchit'
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
