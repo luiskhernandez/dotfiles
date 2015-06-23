@@ -189,14 +189,15 @@ nmap ,t :call RunCurrentSpecFile()<CR>
 nmap ,s :call RunNearestSpec()<CR>
 nmap ,l :call RunLastSpec()<CR>
 nmap ,a :call RunAllSpecs()<CR>
+nmap ,r :! chrome-cli reload<CR>
 
 " let g:rspec_runner = "os_x_iterm"
-" let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
-let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
+let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
+" let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
 " map for commetary usin cm is more friendly"
 map cm gc
 " use F to serach"
-noremap F /
+" noremap F /
 map !d "_d
 map !c "_c
 "show cursor line Horizontal and Vertical"
@@ -229,7 +230,8 @@ inoremap <C-f> <C-x><C-f>
 nnoremap <leader>z :ZoomWin<CR>
 
 "config for rubocop , for now just for VHL projecyts at koombea"
-let g:vimrubocop_config = '/Users/koombea/projects/vhl/vhl-rubocop.yml'
+" let g:vimrubocop_config = '/Users/koombea/projects/vhl/vhl-rubocop.yml'
 let g:ctrlp_max_files=0
 " clipboard unnamed for yank between vim, tmux and osx"
 set clipboard=unnamed
+runtime macros/matchit.vim
