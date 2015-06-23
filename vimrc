@@ -47,7 +47,7 @@ call vundle#end()   " required
 filetype plugin indent on    " required
 
 " Use the colorscheme from above
-colorscheme monokai
+color Tomorrow-Night
 set background=dark
 " let g:solarized_termcolors = 256
 " colorscheme solarized
@@ -104,49 +104,28 @@ set showmatch
 " 0 seconds between showing matches
 set matchtime=0
 
-
-"select current word using space
-map , viw
-
-" move lines
-no <down> ddp
-no <up> ddkP
-
 " edit my vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-
-" surround current word with "
-noremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
 
 " indent all file
 map <leader>i mmgg=G'm<CR>
 
-"paste from clipboard
-map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
-"copy to clipboard
-map <leader>y "+y
-"copy currentline to clipboard
-map <leader>Y "+y
-
 "shortcut exit  insert mode 
 imap jk <esc>
-"shortcut exit  visual mode
-vmap <leader>jk <esc>
 "shortcut for save :write  on visual mode
 nmap s :wa<cr>
 nmap S :x<cr>
 "shortcut for close (:q) buffer 
 map <leader>q <esc>:q<cr>
 map <leader>Q <esc>:q!<cr>
+
 nnoremap <leader>c :nohl<cr>
 "Quick save to repo as WIP
-map <Leader>gwip :!git add . && git commit -m 'WIP' && git push origin<cr>
+map <Leader>wip :!git add . && git commit -m 'WIP' && git push origin<cr>
 "mapping for GIT
 map gt :Gstatus<cr>
 "Easymotion mapping
 map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 nmap <Leader>f <Plug>(easymotion-s2)
 nnoremap <Leader>t <Plug>(easymotion-t2)
@@ -193,14 +172,10 @@ nmap ,a :call RunAllSpecs()<CR>
 nmap ,r :! chrome-cli reload<CR>
 
 " let g:rspec_runner = "os_x_iterm"
-let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
-" let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
+" let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
+let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
 " map for commetary usin cm is more friendly"
 map cm gc
-" use F to serach"
-" noremap F /
-map !d "_d
-map !c "_c
 "show cursor line Horizontal and Vertical"
 set cursorline cursorcolumn
 "Sane Ignore For ctrlp"
@@ -223,7 +198,7 @@ iabbrev heigth height
 
 set mouse=a
 
-" Maping for easy autcomplition"
+" Maping for easy autocompletion"
 inoremap <C-l> <C-x><C-l>
 inoremap <C-f> <C-x><C-f>
 
@@ -236,3 +211,4 @@ let g:ctrlp_max_files=0
 " clipboard unnamed for yank between vim, tmux and osx"
 set clipboard=unnamed
 runtime macros/matchit.vim
+set wim=longest,list:full,full
