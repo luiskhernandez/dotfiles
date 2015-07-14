@@ -34,6 +34,9 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
 Plugin 'taylor/vim-zoomwin'
 Plugin 'tmhedberg/matchit'
+Plugin 'Raimondi/delimitMate'
+Plugin 'mklabs/vim-backbone'
+Plugin 'takac/vim-hardtime'
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
@@ -135,6 +138,7 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_y= '%{strftime("%c")}'
 let NERDTreeIgnore = ['\.swp$']
+let NERDTreeShowLineNumbers=1
 
 " vim tab navigation
 
@@ -155,11 +159,13 @@ nmap n nzz
 nmap N Nzz
 nmap } }zz
 nmap { {zz
+nmap L Lzz
+nmap H Hzz
 "quick pairs
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
+" inoremap ' ''<ESC>i
+" inoremap " ""<ESC>i
+" inoremap ( ()<ESC>i
+" inoremap [ []<ESC>i
 inoremap pry binding.pry
 inoremap log console.log
 
@@ -212,3 +218,5 @@ let g:ctrlp_max_files=0
 set clipboard=unnamed
 runtime macros/matchit.vim
 set wim=longest,list:full,full
+let g:hardtime_default_on = 1
+autocmd FileType ruby set omnifunc=rubycomplete#Complete
