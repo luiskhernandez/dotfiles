@@ -37,6 +37,7 @@ Plugin 'tmhedberg/matchit'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mklabs/vim-backbone'
 Plugin 'takac/vim-hardtime'
+Plugin 'dsawardekar/ember.vim'
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
 
@@ -130,8 +131,9 @@ map gt :Gstatus<cr>
 "Easymotion mapping
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>h <Plug>(easymotion-linebackward)
-nmap <Leader>f <Plug>(easymotion-s2)
+nmap <Leader>f <Plug>(easymotion-sn)
 nnoremap <Leader>t <Plug>(easymotion-t2)
+let g:EasyMotion_smartcase = 1
 " Don't scroll off the edge of the page
 set scrolloff=5
 set laststatus=2
@@ -167,7 +169,7 @@ nmap H Hzz
 " inoremap ( ()<ESC>i
 " inoremap [ []<ESC>i
 inoremap pry binding.pry
-inoremap log console.log
+" inoremap log console.log
 
 
 " RSpec.vim mappings
@@ -218,5 +220,5 @@ let g:ctrlp_max_files=0
 set clipboard=unnamed
 runtime macros/matchit.vim
 set wim=longest,list:full,full
-let g:hardtime_default_on = 1
+" let g:hardtime_default_on = 1
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
