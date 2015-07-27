@@ -38,12 +38,14 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'mklabs/vim-backbone'
 Plugin 'takac/vim-hardtime'
 Plugin 'dsawardekar/ember.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/syntastic'
 "reserach and test vim tmux runner seems better"
 Bundle 'christoomey/vim-tmux-navigator'
-
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kana/vim-textobj-user'
 Plugin 'rhysd/vim-textobj-ruby'
+Plugin 'bronson/vim-trailing-whitespace'
 " Colors
 " Plugin 'nanotech/jellybeans.vim'
 
@@ -135,8 +137,8 @@ nmap <Leader>f <Plug>(easymotion-sn)
 nnoremap <Leader>t <Plug>(easymotion-t2)
 let g:EasyMotion_smartcase = 1
 " Don't scroll off the edge of the page
-set scrolloff=5
-set laststatus=2
+" set scrolloff=5
+" set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_section_y= '%{strftime("%c")}'
 let NERDTreeIgnore = ['\.swp$']
@@ -151,6 +153,14 @@ nnoremap tl :tablast<CR>
 nnoremap tc :tabclose<CR>
 nnoremap tn :tabnew<CR>
 
+" git Support
+noremap <leader>gb :Gblame<CR>
+noremap <leader>gs :Gstatus<CR>
+noremap <leader>gd :Gdiff<CR>
+noremap <leader>gl :Glog<CR>
+noremap <leader>gc :Gcommit<CR>
+noremap <leader>gd :Gdiff<CR>
+noremap <leader>gp :Git push<CR>
 " vim buffer navigation"
 noremap <leader><right> :bnext<CR>
 noremap <leader><left>  :bprevious<CR>
@@ -168,7 +178,7 @@ nmap H Hzz
 " inoremap " ""<ESC>i
 " inoremap ( ()<ESC>i
 " inoremap [ []<ESC>i
-inoremap pry binding.pry
+" inoremap pry binding.pry
 " inoremap log console.log
 
 
@@ -222,3 +232,32 @@ runtime macros/matchit.vim
 set wim=longest,list:full,full
 " let g:hardtime_default_on = 1
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
+
+"Syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+" NERDTress File highlighting
+function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
+ exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
+ exec 'autocmd filetype nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+endfunction
+
+call NERDTreeHighlightFile('jade', 'green', 'none', 'green', '#151515')
+call NERDTreeHighlightFile('ini', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('md', 'blue', 'none', '#3366FF', '#151515')
+call NERDTreeHighlightFile('yml', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('config', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('conf', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('json', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('html', 'yellow', 'none', 'yellow', '#151515')
+call NERDTreeHighlightFile('styl', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('css', 'cyan', 'none', 'cyan', '#151515')
+call NERDTreeHighlightFile('coffee', 'Red', 'none', 'red', '#151515')
+call NERDTreeHighlightFile('js', 'Red', 'none', '#ffa500', '#151515')
+call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
