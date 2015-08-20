@@ -19,7 +19,7 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-dispatch'
-Plugin 'Lokaltog/vim-easymotion'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'rking/ag.vim'
@@ -121,9 +121,6 @@ imap jk <esc>
 "shortcut for save :write  on visual mode
 nmap s :wa<cr>
 nmap S :x<cr>
-"shortcut for close (:q) buffer 
-map <leader>q <esc>:q<cr>
-map <leader>Q <esc>:q!<cr>
 
 nnoremap <leader>c :nohl<cr>
 "Quick save to repo as WIP
