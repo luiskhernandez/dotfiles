@@ -46,6 +46,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kana/vim-textobj-user'
 Plugin 'rhysd/vim-textobj-ruby'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ngmy/vim-rubocop'
 " Colors
 " Plugin 'nanotech/jellybeans.vim'
 
@@ -187,8 +188,8 @@ nmap ,a :call RunAllSpecs()<CR>
 nmap ,r :! chrome-cli reload<CR>
 
 " let g:rspec_runner = "os_x_iterm"
-" let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
-let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
+let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
+" let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
 " map for commetary usin cm is more friendly"
 map cm gc
 "show cursor line Horizontal and Vertical"
@@ -226,9 +227,12 @@ let g:ctrlp_max_files=0
 " clipboard unnamed for yank between vim, tmux and osx"
 set clipboard=unnamed
 runtime macros/matchit.vim
-set wim=longest,list:full,full
+" set wim=longest,list:full,full
 " let g:hardtime_default_on = 1
 autocmd FileType ruby set omnifunc=rubycomplete#Complete
+
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
 
 "Syntastic
 " set statusline+=%#warningmsg#
