@@ -11,7 +11,7 @@ olddir=~/dotfiles_old             # old dotfiles backup directory
 files="vimrc vim zshrc tmux.conf"    # list of files/folders to symlink in homedir
 
 ##########
-
+git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/vim/bundle/Vundle.vim
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
