@@ -27,7 +27,11 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
-Plugin 'msanders/snipmate.vim'
+" Plugin 'msanders/snipmate.vim'
+"" Track the engine.
+Plugin 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
@@ -164,7 +168,8 @@ nmap ,r :! chrome-cli reload<CR>
 
 " let g:rspec_runner = "os_x_iterm"
 " let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
-let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
+" let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
+let g:rspec_command = "Dispatch rspec {spec}"
 " map for commetary usin cm is more friendly"
 map cm gc
 "show cursor line Horizontal and Vertical"
@@ -228,3 +233,9 @@ call NERDTreeHighlightFile('php', 'Magenta', 'none', '#ff00ff', '#151515')
 
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
