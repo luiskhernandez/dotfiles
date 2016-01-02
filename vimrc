@@ -50,6 +50,20 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'rhysd/vim-textobj-ruby'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'mattn/gist-vim'
+Plugin 'luochen1990/rainbow'
+Plugin 'Shougo/neocomplete.vim.git'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'elzr/vim-json'
+Plugin 'pangloss/vim-javascript'
+Plugin 'gorodinskiy/vim-coloresque'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-markdown'
+Plugin 'spf13/vim-preview'
+Plugin 'mbbill/undotree'
+Plugin 'nathanaelkane/vim-indent-guides'
+
 " Colors
 " Plugin 'nanotech/jellybeans.vim'
 
@@ -114,10 +128,9 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 map <leader>i mmgg=G'm<CR>
 
 "shortcut exit  insert mode
-imap jk <esc>
+imap jk <esc>l
 "shortcut for save :write  on visual mode
 nmap s :wa<cr>
-nmap S :x<cr>
 
 nnoremap <leader>c :nohl<cr>
 "Easymotion mapping
@@ -235,7 +248,15 @@ vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+set ts=4 sw=4 et
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+
+set foldmethod=syntax
+set foldlevel=20
+
+let g:neocomplete#enable_at_startup = 1
