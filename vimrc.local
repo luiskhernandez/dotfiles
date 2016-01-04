@@ -1,0 +1,52 @@
+set relativenumber
+"use  jk as <esc>
+imap jk <esc>
+vmap jk <esc>
+"use ñ as :
+nmap ñ :
+vmap ñ :
+"use s for save (write)
+nmap s :wa<cr>
+color Tomorrow-Night
+map cm gc
+"maping for ZoomWin"
+nnoremap <leader>z :ZoomWin<CR>
+
+nmap <Leader>r :RuboCop<CR>
+
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+
+set cursorline cursorcolumn
+
+"I really hate that things don't auto-center
+nmap G Gzz
+nmap n nzz
+nmap N Nzz
+nmap } }zz
+nmap { {zz
+nmap L Lzz
+nmap H Hzz
+
+" RSpec.vim mappings
+nmap ,t :call RunCurrentSpecFile()<CR>
+nmap ,s :call RunNearestSpec()<CR>
+nmap ,l :call RunLastSpec()<CR>
+nmap ,a :call RunAllSpecs()<CR>
+nmap ,r :! chrome-cli reload<CR>
+
+" use tab with 2 spaces
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set expandtab
+" indent all file
+map <leader>i gg=G
+
+nnoremap <leader>c :nohl<cr>
+"Easymotion mapping
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>h <Plug>(easymotion-linebackward)
+nmap <Leader>f <Plug>(easymotion-sn)
+nnoremap <Leader>t <Plug>(easymotion-t2)
+let g:EasyMotion_smartcase = 1
