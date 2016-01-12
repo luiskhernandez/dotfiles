@@ -27,11 +27,10 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
-" Plugin 'msanders/snipmate.vim'
+Plugin 'msanders/snipmate.vim'
 "" Track the engine.
-Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
-Plugin 'honza/vim-snippets'
+" Plugin 'honza/vim-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'godlygeek/tabular'
@@ -44,12 +43,13 @@ Plugin 'dsawardekar/ember.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
 "reserach and test vim tmux runner seems better"
-Bundle 'christoomey/vim-tmux-navigator'
+" Bundle 'christoomey/vim-tmux-navigator'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'kana/vim-textobj-user'
 Plugin 'rhysd/vim-textobj-ruby'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'chrisbra/NrrwRgn'
 " Colors
 " Plugin 'nanotech/jellybeans.vim'
 
@@ -57,13 +57,10 @@ call vundle#end()   " required
 filetype plugin indent on    " required
 
 " Use the colorscheme from above
-color Tomorrow-Night
+color molokai
 set background=dark
 " set leader
 let mapleader = " "
-"for closer key
-nmap ñ :
-vmap ñ :
 nnoremap <leader>m :NERDTreeToggle<CR>
 set noswapfile
 set encoding=utf-8
@@ -81,12 +78,6 @@ let g:html_indent_tags = 'li\|p'
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
-
-" Quicker window movement
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-h> <C-w>h
-nnoremap <C-l> <C-w>l
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
@@ -112,12 +103,6 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 
 " indent all file
 map <leader>i mmgg=G'm<CR>
-
-"shortcut exit  insert mode
-imap jk <esc>
-"shortcut for save :write  on visual mode
-nmap s :wa<cr>
-nmap S :x<cr>
 
 nnoremap <leader>c :nohl<cr>
 "Easymotion mapping
@@ -180,11 +165,6 @@ let g:ctrlp_custom_ignore = {
 \ 'file': '\.so$\|\.dat$|\.DS_Store$'
 \ }
 
-"Remove all comments from file"
-map <leader>rc :g/^\#/d<CR>
-
-"Auto spell correction"
-
 iabbrev lenght length
 iabbrev widht width
 iabbrev heigth height
@@ -239,3 +219,14 @@ let g:UltiSnipsExpandTrigger="<tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
+set timeoutlen=1000
+set ttimeoutlen=0
+imap jk <Esc>l
+vmap jk <Esc>l
+
+
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
