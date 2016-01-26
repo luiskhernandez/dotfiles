@@ -9,7 +9,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin() "required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'mintplant/vim-literate-coffeescript'
 Plugin 'skwp/greplace.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
@@ -28,6 +27,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'msanders/snipmate.vim'
+Plugin 'SirVer/ultisnips'
 "" Track the engine.
 " Snippets are separated from the engine. Add this if you want them:
 " Plugin 'honza/vim-snippets'
@@ -50,6 +50,9 @@ Plugin 'rhysd/vim-textobj-ruby'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'ngmy/vim-rubocop'
 Plugin 'chrisbra/NrrwRgn'
+Plugin 'mxw/vim-jsx'
+Plugin 'isRuslan/vim-es6'
+Plugin 'moll/vim-node'
 " Colors
 " Plugin 'nanotech/jellybeans.vim'
 
@@ -195,7 +198,6 @@ vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
@@ -210,3 +212,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+let g:endwise_no_mappings = 1
+let g:UltiSnipsExpandTrigger = "<tab>"
