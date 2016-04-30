@@ -80,9 +80,11 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 DISABLE_AUTO_TITLE=true
-
 export NVM_DIR="/Users/luiskhernandez/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export EDITOR='vim'
+source ~/bin/tmuxinator.zsh
+source ~/.bashrc
