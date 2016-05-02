@@ -186,7 +186,7 @@ set clipboard=unnamed
 runtime macros/matchit.vim
 " set wim=longest,list:full,full
 " let g:hardtime_default_on = 1
-autocmd FileType ruby set omnifunc=rubycomplete#Complete
+" autocmd FileType ruby set omnifunc=rubycomplete#Complete
 
 let g:vimrubocop_keymap = 0
 nmap <Leader>r :RuboCop<CR>
