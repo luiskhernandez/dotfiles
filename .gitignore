@@ -1,4 +1,5 @@
 vim/.netrwhist
 vim/bundle
 vim/vim
+bin/bin
 !vim/bundle/UltiSnips

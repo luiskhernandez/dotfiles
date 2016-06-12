@@ -27,7 +27,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'msanders/snipmate.vim'
-Plugin 'SirVer/ultisnips'
+" Plugin 'SirVer/ultisnips'
 "" Track the engine.
 " Snippets are separated from the engine. Add this if you want them:
 " Plugin 'honza/vim-snippets'
@@ -38,8 +38,8 @@ Plugin 'taylor/vim-zoomwin'
 Plugin 'tmhedberg/matchit'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mklabs/vim-backbone'
-Plugin 'takac/vim-hardtime'
-Plugin 'dsawardekar/ember.vim'
+" Plugin 'takac/vim-hardtime'
+" Plugin 'dsawardekar/ember.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
 "reserach and test vim tmux runner seems better"
@@ -49,7 +49,7 @@ Plugin 'kana/vim-textobj-user'
 Plugin 'rhysd/vim-textobj-ruby'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'ngmy/vim-rubocop'
-Plugin 'chrisbra/NrrwRgn'
+" Plugin 'chrisbra/NrrwRgn'
 Plugin 'mxw/vim-jsx'
 Plugin 'isRuslan/vim-es6'
 Plugin 'moll/vim-node'
@@ -156,7 +156,8 @@ nmap ,r :! chrome-cli reload<CR>
 " let g:rspec_runner = "os_x_iterm"
 " let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
 " let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
-let g:rspec_command = "Dispatch rspec {spec}"
+" let g:rspec_command = "Dispatch rspec {spec}"
+let g:rspec_command = "Dispatch bin/rake test {spect}"
 " map for commetary usin cm is more friendly"
 map cm gc
 "show cursor line Horizontal and Vertical"
@@ -213,5 +214,5 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-let g:endwise_no_mappings = 1
+" let g:endwise_no_mappings = 1
 let g:UltiSnipsExpandTrigger = "<tab>"
