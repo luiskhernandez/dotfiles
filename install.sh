@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bin vimrc vim zshrc tmux.conf"    # list of files/folders to symlink in homedir
+files="vimrc vim zshrc tmux.conf"    # list of files/folders to symlink in homedir
 
 ##########
 git clone https://github.com/VundleVim/Vundle.vim.git ~/dotfiles/vim/bundle/Vundle.vim
@@ -34,3 +34,8 @@ for file in $files; do
   echo "Creating symlink to $file in home directory."
   ln -s $dir/$file ~/.$file
 done
+
+bin="bin"
+
+ln -s $dir/$bin ~/$bin
+#uninstall find . -maxdepth 1 -type l | xargs rm
