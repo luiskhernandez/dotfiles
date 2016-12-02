@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+class String
+  def remove_curly_brackets
+    self.gsub(/{|}/,'').gsub("  "," ")
+  end
+end
+lines = STDIN.each_line.map { |l|  l }
+regex =/^import (\w+).* from/
+lines.sort! do |a, b|
+  a_ = a.remove_curly_brackets.match(regex).captures.first.downcase
+  b_ = b.remove_curly_brackets.match(regex).captures.first.downcase
+  a_ <=> b_
+end
+
+lines.each {|l| puts l}

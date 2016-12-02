@@ -3,3 +3,9 @@ vim/bundle
 vim/vim
 bin/bin
 !vim/bundle/UltiSnips
+bin/console_config
+bin/console_stg
+bin/log_config
+bin/log_stg
+bin/ngrok
+.DS_Store

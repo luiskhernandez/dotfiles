@@ -84,7 +84,22 @@ alias zs="vim ~/.zshrc"
 alias szs="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 DISABLE_AUTO_TITLE=true
-export NVM_DIR="/Users/luisk/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# export NVM_DIR="/Users/luiskhernandez/.nvm"
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export EDITOR='vim'
 eval "$(rbenv init -)"
+
+export DEFAULT_USER="presto"
+
+searchAndDestroy(){
+  # kill processes on some tcp port:
+  if [ -z "$1" ]; then
+    echo "Usage: searchAndDestroy [numeric port identifier]" >&2
+    return 1
+  fi
+  lsof -i TCP:$1 | awk '/LISTEN/{print $2}' | xargs kill -9
+}
+export NPM_TOKEN=c9bd3200-0e79-4056-98c8-ea383e16b1ff

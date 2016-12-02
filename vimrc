@@ -22,7 +22,8 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'rking/ag.vim'
-Plugin 'thoughtbot/vim-rspec'
+" Plugin 'thoughtbot/vim-rspec'
+Plugin 'janko-m/vim-test'
 Plugin 'mattn/emmet-vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jgdavey/tslime.vim'
@@ -147,17 +148,17 @@ nmap L Lzz
 nmap H Hzz
 
 " RSpec.vim mappings
-nmap ,t :call RunCurrentSpecFile()<CR>
-nmap ,s :call RunNearestSpec()<CR>
-nmap ,l :call RunLastSpec()<CR>
-nmap ,a :call RunAllSpecs()<CR>
+" nmap ,t :call RunCurrentSpecFile()<CR>
+" nmap ,s :call RunNearestSpec()<CR>
+" nmap ,l :call RunLastSpec()<CR>
+" nmap ,a :call RunAllSpecs()<CR>
 nmap ,r :! chrome-cli reload<CR>
 
 " let g:rspec_runner = "os_x_iterm"
 " let g:rspec_command = "call Send_to_Tmux('spring rspec {spec}\n')"
 " let g:rspec_command = "call Send_to_Tmux('rspec {spec}\n')"
-" let g:rspec_command = "Dispatch rspec {spec}"
-let g:rspec_command = "Dispatch bin/rake test {spect}"
+" let g:rspec_command = "Dispatch bundle exec rspec {spec}"
+" let g:rspec_command = "Dispatch bin/rake test {spect}"
 " map for commetary usin cm is more friendly"
 map cm gc
 "show cursor line Horizontal and Vertical"
@@ -216,3 +217,37 @@ nnoremap <C-l> <C-w>l
 
 " let g:endwise_no_mappings = 1
 let g:UltiSnipsExpandTrigger = "<tab>"
+
+function! RubyInfo()
+  ruby << EOF
+    puts RUBY_VERSION
+    puts RUBY_PLATFORM
+    puts RUBY_RELEASE_DATE
+EOF
+endfunction
+" I don't know what fix this, but is cool to have it
+" Make vim faster on bigger files
+set re=1
+set ttyfast
+set lazyredraw
+
+if filereadable('node_modules/babel/register.js')
+  " babel 5
+  let g:test#javascript#mocha#options = "--compilers js:babel/register --colors --full-trace --timeout 15000"
+elseif filereadable('node_modules/babel-register/lib/node.js')
+  " babel 6
+  let g:test#javascript#mocha#options = "--compilers js:babel-register --require babel-polyfill --colors --full-trace --timeout 15000"
+else
+  " no babel
+  let g:test#javascript#mocha#options = "--colors --full-trace --timeout 15000"
+endif
+
+let g:test#javascript#mocha#file_pattern = ".test.js"
+let g:test#javascript#mocha#executable= 'NODE_ENV=test node_modules/.bin/mocha'
+
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+
