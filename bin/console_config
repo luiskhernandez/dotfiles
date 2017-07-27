@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh ec2-user@10.50.65.13 -t 'sudo docker exec -it $(sudo docker ps -q | head -n1) bash -c "bundle exec rails c"'

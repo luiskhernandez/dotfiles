@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh ec2-user@10.50.65.13 'cd /var/log/eb-docker/containers/eb-current-app && tail -f $(ls -t | head -n1)'
