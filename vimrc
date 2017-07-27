@@ -39,7 +39,7 @@ Plugin 'taylor/vim-zoomwin'
 Plugin 'tmhedberg/matchit'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mklabs/vim-backbone'
-" Plugin 'takac/vim-hardtime'
+Plugin 'takac/vim-hardtime'
 " Plugin 'dsawardekar/ember.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
@@ -51,9 +51,15 @@ Plugin 'rhysd/vim-textobj-ruby'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'ngmy/vim-rubocop'
 " Plugin 'chrisbra/NrrwRgn'
-Plugin 'mxw/vim-jsx'
+" Plugin 'mxw/vim-jsx'
+"
+Plugin 'pangloss/vim-javascript'
+Plugin 'maxmellon/vim-jsx-pretty'
+
 Plugin 'isRuslan/vim-es6'
 Plugin 'moll/vim-node'
+Plugin 'jparise/vim-graphql'
+
 " Colors
 " Plugin 'nanotech/jellybeans.vim'
 
@@ -114,6 +120,9 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>h <Plug>(easymotion-linebackward)
 nmap <Leader>f <Plug>(easymotion-sn)
 nnoremap <Leader>t <Plug>(easymotion-t2)
+
+"Open NerdTree in current file
+map <Leader>, :NERDTreeFind<cr>
 let g:EasyMotion_smartcase = 1
 
 let g:airline#extensions#tabline#enabled = 1
@@ -172,6 +181,8 @@ let g:ctrlp_custom_ignore = {
 iabbrev lenght length
 iabbrev widht width
 iabbrev heigth height
+iabbrev qualitrcs qualtrics
+
 
 set mouse=a
 
@@ -251,3 +262,9 @@ nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
+" let g:jsx_ext_required = 0

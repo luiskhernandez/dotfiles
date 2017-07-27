@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/luiskhernandez/projects/voltron.asm/app/shared/health-assessments'
+let g:netrw_dirhist_2='/Users/luiskhernandez/projects/voltron.asm/app/shared/health-assessments/components'
+let g:netrw_dirhist_3='/Users/luiskhernandez/projects/voltron.asm/app/shared/health-assessments/components/results'

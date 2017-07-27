@@ -1,0 +1,1 @@
+ssh -i ~/.ssh/id_rsa -N -L 25673:10.50.129.5:15671 luis.macias@bastion-hades.srv.hades.cafewell.com

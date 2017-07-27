@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh rails1.srv.athena.cafewell.com -t 'cd /opt/custom3/cafewell/current && tail -f log/custom3.log'
