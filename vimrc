@@ -110,10 +110,9 @@ map <leader>i mmgg=G'm<CR>
 
 nnoremap <leader>c :nohl<cr>
 "Easymotion mapping
-map <Leader>l <Plug>(easymotion-lineforward)
-map <Leader>h <Plug>(easymotion-linebackward)
-nmap <Leader>f <Plug>(easymotion-sn)
-nnoremap <Leader>t <Plug>(easymotion-t2)
+map <Leader><Leader>l <Plug>(easymotion-lineforward)
+map <Leader><Leader>h <Plug>(easymotion-linebackward)
+nmap <Leader><Leader>f <Plug>(easymotion-sn)
 let g:EasyMotion_smartcase = 1
 
 let g:airline#extensions#tabline#enabled = 1
@@ -250,4 +249,4 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
-
+nmap <leader>, : NERDTreeFind<CR>
