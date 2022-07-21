@@ -14,3 +14,5 @@ map('','<up>', '<nop>', {noremap = true })
 map('','<down>', '<nop>', {noremap = true })
 map('','<left>', '<nop>', {noremap = true })
 map('','<right>', '<nop>', {noremap = true })
+
+map('n', '<leader>,', ':Neotree toggle<CR>', default_opts)       -- open/close
