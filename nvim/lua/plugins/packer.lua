@@ -6,13 +6,15 @@ end
 
 
 return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
   -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
+  use 'wbthomason/packer.nvim'
+
   -- Unless you are still migrating, remove the deprecated commands from v1.x
 vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
+  -- colorschemes
+  use 'Shatur/neovim-ayu'
+  --use 'navarasu/onedark.nvim'
 use {
   "nvim-neo-tree/neo-tree.nvim",
     branch = "v2.x",
