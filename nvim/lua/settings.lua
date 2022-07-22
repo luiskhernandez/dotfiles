@@ -9,9 +9,3 @@ local opt = vim.opt
 -- General
 
 g.mapleader = " "
-
-
--- UI
-
-opt.number = true
-opt.relativenumber = true
