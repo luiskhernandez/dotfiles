@@ -9,13 +9,6 @@ local term_opts = { silent = true }
 
 map('i','jk','<ESC>', default_opts)
 
--- Disable arrow keys
-
-map('','<up>', '<nop>', {noremap = true })
-map('','<down>', '<nop>', {noremap = true })
-map('','<left>', '<nop>', {noremap = true })
-map('','<right>', '<nop>', {noremap = true })
-
 -- nvim-tree
 map('n', '<leader>e', ':Neotree toggle<CR>', default_opts)       -- open/close
 
