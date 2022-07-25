@@ -67,10 +67,14 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Auto pairs
   use {
     "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
   }
+
+  use "lukas-reineke/indent-blankline.nvim"
+
   --
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

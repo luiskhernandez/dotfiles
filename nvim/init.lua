@@ -10,4 +10,5 @@ require "plugins.neo-tree"
 require "plugins.tabby"
 require "plugins.cmp"
 require "plugins.telescope"
+require "plugins.identline"
 
