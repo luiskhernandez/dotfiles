@@ -4,9 +4,18 @@ local map = vim.api.nvim_set_keymap
 local cmd = vim.cmd
 local default_opts = {noremap = true, silent = true}
 local term_opts = { silent = true }
-
+-- Modes
+--   normal_mode = "n",
+--   insert_mode = "i",
+--   visual_mode = "v",
+--   visual_block_mode = "x",
+--   term_mode = "t",
+--   command_mode = "c",
+--Remap space as leader key
+map("", "<Space>", "<Nop>", default_opts)
+--
 -- General
-
+--
 map('i','jk','<ESC>', default_opts)
 
 -- nvim-tree
@@ -30,3 +39,7 @@ map("v", ">", ">gv", default_opts)
 
 -- prevent yank when pasting in visual mode.
 map("v", "p", '"_dP', default_opts)
+
+-- Telescope
+map("n","<leader>ff", ":Telescope find_files<CR>", default_opts)
+map("n","<leader>fg", ":Telescope live_grep<CR>", default_opts)

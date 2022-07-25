@@ -19,11 +19,13 @@ def install(program)
     tmux: "brew install tmux",
     nvim: "brew install neovim",
     tree: "brew install tree",
+    rg: "brew install ripgrep",
+    amethyst: "brew install --cask amethyst",
     "reattach-to-user-namespace": "brew install reattach-to-user-namespace"
   }
   `which -s #{program}`
   if $?.success?
-    return puts "#{program} already installed ✅".green
+    return puts "#{program} already installed ✅"
   else
     puts "🟡 #{program} installing"
     exec installation_options[program.to_sym]
@@ -68,6 +70,7 @@ def main
   end
 
   install "tree"
+  install "rg"
   install_nerd_fonts
 end
 
