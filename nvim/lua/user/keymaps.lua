@@ -16,7 +16,8 @@ map("", "<Space>", "<Nop>", default_opts)
 --
 -- General
 --
-map('i','jk','<ESC>', default_opts)
+map('i','jk','<ESC>l', default_opts)
+map('v','jk','<ESC>l', default_opts)
 
 -- nvim-tree
 map('n', '<leader>,', ':Neotree toggle<CR>', default_opts)       -- open/close
