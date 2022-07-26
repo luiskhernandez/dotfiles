@@ -27,6 +27,7 @@ def install(program)
     asdf: "brew install asdf",
     gpg: "brew install gpg",
     gawk: "brew install gawk",
+    lazygit: "brew install lazygit",
     nodejs: "asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git"
   }
 
@@ -79,11 +80,13 @@ def main
   install "tree"
   install "rg"
   install "asdf"
+  install "lazygit"
   ## TODO add asdf to the plugins options in .zshc
   install_nerd_fonts
   ## NODE 
   install "nodejs"
   system "asdf install nodejs latest"
+  system "asdf global nodejs latest"
   system "asdf global nodejs latest"
 end
 
