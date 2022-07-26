@@ -20,7 +20,6 @@ map('i','jk','<ESC>', default_opts)
 
 -- nvim-tree
 map('n', '<leader>,', ':Neotree toggle<CR>', default_opts)       -- open/close
-map('n', '<leader>e', ':Neotree toggle<CR>', default_opts)       -- open/close
 
 -- Better window navigation
 map('n','<C-h>','<C-w>h', default_opts)

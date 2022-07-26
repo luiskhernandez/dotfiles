@@ -11,4 +11,6 @@ require "plugins.tabby"
 require "plugins.cmp"
 require "plugins.telescope"
 require "plugins.identline"
+require "plugins.treesitter"
+require "plugins.lsp"
 
