@@ -3,6 +3,9 @@ require("neo-tree").setup({
   popup_border_style = "rounded",
   filesystem = {
     follow_current_file = true,
+  },
+  window= {
+    width = 25
   }
 })
 
