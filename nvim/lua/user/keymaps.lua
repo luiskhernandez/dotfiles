@@ -42,4 +42,8 @@ map("v", "p", '"_dP', default_opts)
 
 -- Telescope
 map("n","<leader>ff", ":Telescope find_files<CR>", default_opts)
+map("n","<C-p>", ":Telescope find_files<CR>", default_opts)
 map("n","<leader>fg", ":Telescope live_grep<CR>", default_opts)
+
+--- Comment
+map("n", "cm","gc", term_opts)

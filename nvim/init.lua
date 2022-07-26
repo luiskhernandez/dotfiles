@@ -13,4 +13,4 @@ require "plugins.telescope"
 require "plugins.identline"
 require "plugins.treesitter"
 require "plugins.lsp"
-
+require "plugins.comment"
