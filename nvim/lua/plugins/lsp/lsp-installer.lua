@@ -4,7 +4,6 @@ if not status_ok then
 end
 
 lsp_installer.on_server_ready(function(server)
-  print(server.name)
 	local opts = {
     automatic_installation = true,
 		on_attach = require("plugins.lsp.handlers").on_attach,

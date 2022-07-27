@@ -16,3 +16,4 @@ require "plugins.lsp"
 require "plugins.comment"
 require "plugins.gitsigns"
 require "plugins.toggleterm"
+

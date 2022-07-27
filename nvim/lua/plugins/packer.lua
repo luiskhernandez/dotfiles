@@ -50,7 +50,7 @@ return require('packer').startup(function(use)
   }
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/nvim-cmp" -- The completion use
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
@@ -83,6 +83,7 @@ return require('packer').startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   use "numToStr/Comment.nvim"
   use 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -90,6 +91,16 @@ return require('packer').startup(function(use)
   use "lewis6991/gitsigns.nvim"  --
   -- ToggleTerm
   use "akinsho/toggleterm.nvim"
+  --- Tpope magic
+  use "tpope/vim-rails"
+  use "tpope/vim-surround"
+  use "tpope/vim-endwise"
+  use "tpope/vim-ragtag"
+  ---
+  use 'kana/vim-textobj-user'
+  use 'rhysd/vim-textobj-ruby'
+  -- EMMET
+  use 'mattn/emmet-vim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
