@@ -20,6 +20,7 @@ def install(program)
     tmux: "brew install tmux",
     nvim: "brew install neovim",
     tree: "brew install tree",
+    tmuxinator: "brew install tmuxinator",
     rg: "brew install ripgrep",
     amethyst: "brew install --cask amethyst",
     "reattach-to-user-namespace": "brew install reattach-to-user-namespace",
@@ -85,6 +86,7 @@ def main
   install_nerd_fonts
   ## NODE 
   install "nodejs"
+  install "tmuxinator"
   system "asdf install nodejs latest"
   system "asdf global nodejs latest"
   system "asdf global nodejs latest"
