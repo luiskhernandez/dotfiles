@@ -28,6 +28,8 @@ map('n','<C-j>','<C-w>j', default_opts)
 map('n','<C-k>','<C-w>k', default_opts)
 map('n','<C-l>','<C-w>l', default_opts)
 
+-- Lazygit
+map('n','<C-g>',":lua _LAZYGIT_TOGGLE()<CR>" ,default_opts)
 
 -- Visual --
 map("x", "K", ":m '<-2<CR>gv=gv",default_opts)
@@ -44,7 +46,11 @@ map("v", "p", '"_dP', default_opts)
 -- Telescope
 map("n","<leader>ff", ":Telescope find_files<CR>", default_opts)
 map("n","<C-p>", ":Telescope find_files<CR>", default_opts)
+map("n","<leader>s", ":Telescope tmux sessions<CR>", default_opts)
 map("n","<leader>fg", ":Telescope live_grep<CR>", default_opts)
+
+-- Command Paletter
+map("n","<leader>k", ":Telescope command_palette<CR>", default_opts)
 
 --- Comment
 map("n", "cm","gc", term_opts)

@@ -129,3 +129,4 @@ cmp.setup {
     },
   }
 }
+require("luasnip.loaders.from_snipmate").load()

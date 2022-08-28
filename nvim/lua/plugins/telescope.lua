@@ -6,6 +6,8 @@ end
 --telescope.load_extension('media_files')
 
 local actions = require "telescope.actions"
+local builtin = require "telescope.builtin"
+
 
 telescope.setup {
   defaults = {
@@ -81,5 +83,22 @@ telescope.setup {
   },
   pickers = {
   },
-  extensions = { },
+  extensions = { 
+    file_browser = {
+      theme = "ivy"
+    },
+    command_palette = {
+      { "Neovim",
+        { "reload", ":luafile $MYVIMRC" },
+      },
+      { "LuaSnip",
+        { "list snip", ":Telescope luasnip" },
+      },
+    }
+  },
 }
+
+require'telescope'.load_extension('file_browser')
+require'telescope'.load_extension('tmux')
+require'telescope'.load_extension('command_palette')
+require'telescope'.load_extension('luasnip')

@@ -65,7 +65,13 @@ return require('packer').startup(function(use)
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     -- or                            , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = {
+      {'nvim-lua/plenary.nvim'},
+      "nvim-telescope/telescope-file-browser.nvim",
+      "camgraff/telescope-tmux.nvim",
+      "LinArcX/telescope-command-palette.nvim",
+      "benfowler/telescope-luasnip.nvim",
+    }
   }
 
   -- Auto pairs

@@ -5,7 +5,7 @@ require("neo-tree").setup({
     follow_current_file = true,
   },
   window= {
-    width = 25
+    width = 40
   }
 })
 
